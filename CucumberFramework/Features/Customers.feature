@@ -1,7 +1,7 @@
 Feature: Customers
 
 Background: Steps common for all scenrios
-Given User Launch Chrome browser 
+  Given User Launch Chrome browser 
 	When User opens URL "http://admin-demo.nopcommerce.com/login" 
 	And User enters Email as "admin@yourstore.com" and Password as "admin" 
 	And Click on Login 
@@ -9,7 +9,7 @@ Given User Launch Chrome browser
 	
 @regression
 Scenario: Add New Customer
-
+Given User Launch Chrome browser
 	When User click on customers Menu 
 	And click on customers Menu Item 
 	And click on Add new button 
@@ -21,7 +21,7 @@ Scenario: Add New Customer
 
 	@regression
 	Scenario: Search Customer by Email
-	
+	Given User Launch Chrome browser
 	When User click on customers Menu 
 	And click on customers Menu Item 
 	And Enter customer EMail
@@ -31,7 +31,7 @@ Scenario: Add New Customer
 	
 	@Sanity
 	Scenario: Search Customer by Name
-	
+	Given User Launch Chrome browser
 	When User click on customers Menu 
 	And click on customers Menu Item 
 	And Enter customer FirstName
